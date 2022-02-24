@@ -3,13 +3,13 @@ addEventListener('message', messageReceived2);
 
 function messageReceived2(event) {
     let numberToReach = event.data;
-    let fibonacciSequence = calculateFibonacci(numberToReach);
+    let fibonacciSequence = calculateFibonacci1(numberToReach);
     postMessage(fibonacciSequence);
 }
 
 
 
-function calculateFibonacci(number) {
+function calculateFibonacci1(number) {
     let array = [];
     let n1 = 0;
     let n2 = 1;

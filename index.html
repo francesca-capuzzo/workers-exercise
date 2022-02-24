@@ -5,29 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>Calcolatori</h1>
-    <input type="number" name="" id="input">
-    <div>
-        <img id="loader" style = "display: none" src="./loading.gif" alt="loader">
-        <button onclick="calculatePrime()">Calulate Prime Numbers</button>
-        <p id="result-prime">Result</p>
+    <div class="main-container">
+        <div class="div-title">
+            <h1>Calculate</h1>
+        </div>
+        <div class="div-input">
+            <input type="number" name="inputNumber" id="input" placeholder="Insert number..">
+        </div>
+        <div class="div-prime division">
+            <button onclick="calculatePrime()">Prime</button>
+            <img id="loader" style="display: none" src="./loading.gif" alt="loader">
+            <!-- <div style="width:100%;height:0;padding-bottom:75%;position:relative;"><iframe src="https://giphy.com/embed/kUTME7ABmhYg5J3psM" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/loading-load-builtbybritt-kUTME7ABmhYg5J3psM">via GIPHY</a></p> -->
+            <p id="result-prime"></p>
+        </div>
+        <div class="div-factorial division">
+            <button onclick="calculateFactorial()">Factorial</button>
+            <img id="loader2" style="display: none" src="./loading.gif" alt="loader">
+            <p id="result-factorial"></p>
+        </div>
+        <div class="div-fibonacci division">
+
+            <button onclick="calculateFibonacci()">Fibonacci</button>
+            <img id="loader3" style="display: none" src="./loading.gif" alt="loader">
+            <p id="result-Fibonacci"></p>
+        </div>
     </div>
-    <div>
-        <img id="loader2" style = "display: none" src="./loading.gif" alt="loader">
-        <button onclick="calculateFactorial()">Calculate Factorial Numbers</button>
-        <p id="result-factorial">Result</p>
-    </div>
-    <div>
-        <img id="loader3" style = "display: none" src="./loading.gif" alt="loader">
-        <button onclick="calculateFibonacci()">Calculate Fibonacci Sequence</button>
-        <p id="result-Fibonacci">Result</p>
-    </div>
-    
 </body>
 <script src="./script.js"></script>
-<script src="./workerFact.js"></script>
-<script src="./workerFib.js"></script>
-<script src="./workerPrime.js"></script>
 </html>

@@ -1,24 +1,36 @@
+addEventListener('message', messageReceived);
 
-function calculateFactorial(numero) {
-
-    if (numero === 0) {
-        return 1;
-    }
-    return numero * calculateFactorial(numero - 1);
+function messageReceived(event) {
+    let numberToReach = event.data;
+    let factorialNumber = calculateFactorial1(numberToReach);
+    postMessage(factorialNumber);
 }
 
 
 // let f0 = 1;
 // let numero_1 = 1;
+// let array = [];
 
-// function fattorialeNonRicorsivo(numero) {
+// function calculateFactorial1(numero) {
 //     if (numero === 0) {
 //         return 1;
 //     }
-//     for (let i = 1; i <= numero; i++) {
-
-//         console.log(f = i * numero_1);
-//         numero_1 = f;
+//     for (let i = 1; i < numero; i++) {
+//         f0 = (i * numero_1);
+//         array.push(f0);
+//         numero_1 = f0;
 //     }
-//     return f;
+//     return array;
 // }
+
+function calculateFactorial1(num) {
+    var factorial = 1;
+    for (var i = 2; i <= num; i++) {
+      factorial *= i;
+    }
+    return factorial;
+  }
+
+
+
+
