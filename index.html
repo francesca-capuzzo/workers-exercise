@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Calcolatori</h1>
+    <input type="number" name="" id="input">
+    <div>
+        <img id="loader" style = "display: none" src="./loading.gif" alt="loader">
+        <button onclick="calculatePrime()">Calulate Prime Numbers</button>
+        <p id="result-prime">Result</p>
+    </div>
+    <div>
+        <img id="loader2" style = "display: none" src="./loading.gif" alt="loader">
+        <button onclick="calculateFactorial()">Calculate Factorial Numbers</button>
+        <p id="result-factorial">Result</p>
+    </div>
+    <div>
+        <img id="loader3" style = "display: none" src="./loading.gif" alt="loader">
+        <button onclick="calculateFibonacci()">Calculate Fibonacci Sequence</button>
+        <p id="result-Fibonacci">Result</p>
+    </div>
+    
+</body>
+<script src="./script.js"></script>
+<script src="./workerFact.js"></script>
+<script src="./workerFib.js"></script>
+<script src="./workerPrime.js"></script>
+</html>
