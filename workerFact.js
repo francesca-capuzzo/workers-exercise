@@ -3,7 +3,7 @@ addEventListener('message', messageReceived);
 function messageReceived(event) {
     let numberToReach = event.data;
     let factorialNumber = calculateFactorial1(numberToReach);
-    postMessage(factorialNumber);
+    postMessage([factorialNumber]);
 }
 
 
@@ -23,13 +23,18 @@ function messageReceived(event) {
 //     return array;
 // }
 
+
+
 function calculateFactorial1(num) {
-    var factorial = 1;
-    for (var i = 2; i <= num; i++) {
-      factorial *= i;
-    }
-    return factorial;
+  if (num === undefined) {
+    return "N/A"
   }
+  var factorial = 1;
+  for (var i = 2; i <= num; i++) {
+    factorial *= i;
+  }
+  return factorial;
+}
 
 
 
