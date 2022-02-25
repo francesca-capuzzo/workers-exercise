@@ -12,8 +12,12 @@ function clearScreen(id) {
 
 function calculatePrime() {
     clearScreen('result-prime');
+    let loader = document.getElementById('loader');
+    loader.style.display = 'inline-block';
+    
     const workerPrime = new Worker("./workerPrime.js");
     workerPrime.addEventListener('message', (event) => {
+        loader.style.display = 'none';
         let primeNumber = event.data;
         let par = document.getElementById('result-prime');
         const result = document.createTextNode("Result: ");
@@ -30,8 +34,12 @@ function calculatePrime() {
 
 function calculateFibonacci() {
     clearScreen('result-Fibonacci');
+    let loader2 = document.getElementById('loader2');
+    loader2.style.display = 'inline-block';
+   
     const workerFib = new Worker("./workerFib.js");
     workerFib.addEventListener('message', (event) => {
+        loader2.style.display = 'none';
         let fibonacciSequence = event.data;
         let par = document.getElementById('result-Fibonacci');
         const result = document.createTextNode("Result: ");
@@ -46,10 +54,15 @@ function calculateFibonacci() {
 
 
 
+
 function calculateFactorial() {
     clearScreen('result-factorial');
+    let loader3 = document.getElementById('loader3');
+    loader3.style.display = 'inline-block';
+    
     const workerFact = new Worker('./workerFact.js');
     workerFact.addEventListener('message', (event) => {
+        loader3.style.display = 'none'
         let factorialNumber = event.data;
         let par = document.getElementById('result-factorial');
         const result = document.createTextNode("Result: ");

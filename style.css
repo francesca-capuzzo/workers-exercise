@@ -3,7 +3,8 @@
 
 .main-container{
     text-align: center;
-    border: 1px solid rgba(10, 196, 253, 0.25);
+    border: 2px solid rgba(10, 196, 253, 0.25);
+    display: block;
 
 }
     /*text-align:center;
@@ -24,6 +25,7 @@ h1{
 
 body{
     text-align: center;
+    margin-left: 250px;
 }
 
 button{
@@ -55,7 +57,7 @@ button:hover{
 
 
 #input{
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     padding: 6px 12px;
     font-size: 16px;
     font-weight: 400;
@@ -75,3 +77,16 @@ button:hover{
     outline: 0;
     box-shadow: 0 0 0 0.25rem rgba(10, 196, 253, 0.25);
 }
+
+.outer-container{
+    width: 800px;
+    text-align: center;
+}
+
+
+img{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+}
+
